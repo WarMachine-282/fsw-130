@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
+footer {
+    background-color: gray;
+    bottom: 0;
+    border-top: 3px solid black;
+    color: cornsilk;
+    font-family: 'Roboto', sans-serif;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+  }
