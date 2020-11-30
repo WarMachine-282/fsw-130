@@ -1,14 +1,14 @@
 import React from 'react';
 import './styles.css';
-import Header from "./components/Header"
-import Posts from "./components/Posts"
-import Footer from "./components/Footer"
+import Header from "./components/Header/Header"
+import Data from "./components/Data"
+import Footer from "./components/Footer/Footer"
 
 const App = () => {
   return (
     <div>
       <Header />
-      {/* <Posts />  */}
+      {/* <Data /> */}
       <Footer />
     </div>
   )

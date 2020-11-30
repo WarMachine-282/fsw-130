@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import StoreProvider from "./providers/StoreProvider" 
+import {ContextProvider} from "./components/uglyContext"
 import App from "./App";
 
 ReactDOM.render(
-  <StoreProvider>
+  <ContextProvider>
     <App />
-  </StoreProvider>,
+  </ContextProvider>,
   document.getElementById("root")
 );
