@@ -9,21 +9,21 @@ class ContextProvider extends Component {
         uglydescription: "This is disgusting",
         uglyImage:
           "https://images.unsplash.com/photo-1510251197878-a2e6d2cb590c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8Z3Jvc3N8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60",
-        comments: ["text"],
+        comments: ["I could smell it from here :("],
       },
       {
         uglyTitle: "Ugly Stairwell",
-        uglydescription: "Wow ugly!",
+        uglydescription: "What a mess",
         uglyImage:
           "https://images.unsplash.com/photo-1600876876753-60653741c19e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8aG9hcmRlcnxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        comments: ["text"],
+        comments: ["Needs to call Mr.Clean"],
       },
       {
         uglyTitle: "Ugly House",
-        uglydescription: "What a mess",
+        uglydescription: "Wow ugly!",
         uglyImage:
           "https://images.unsplash.com/photo-1592658221410-0f5c3615e7fc?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8b2xkJTIwaG91c2V8ZW58MHx8MHw%3D&auto=format&fit=crop&w=500&q=60",
-        comments: ["text"],
+        comments: ["Looks like my future home."],
       },
     ],
   };

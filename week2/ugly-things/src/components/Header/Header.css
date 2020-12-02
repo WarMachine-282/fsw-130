@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background: #efefef;
+}
+header {
+  margin: 0;
+  padding: 2em 5em 4em;
+  color: #efefef;
+  overflow: hidden;
+  position: relative;
+}
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: skewY(-4deg);
+  background: rgb(0, 132, 255);
+  transform-origin: bottom left;
+  z-index: -1;
+}
+@media only screen and (max-width: 768px) {
+h2 {
+    /* font-size: 40px; */
+}
+  }
+  @media only screen and (max-width: 940px) {
+h2 {
+    font-size: 10px;
+}
+  }

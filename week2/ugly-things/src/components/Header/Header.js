@@ -4,7 +4,8 @@ import "./Header.css"
 const Header = () => {
     return (
         <header>
-            <h1>hello world</h1>
+            <h1>Ugly Things</h1>
+            <h2>post something beautifully ugly</h2>
         </header>
     )
 }

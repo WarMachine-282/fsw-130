@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { ContextConsumer } from "./uglyContext";
+import "./Data.css";
 
 class Data extends Component {
   state = {
@@ -43,7 +44,6 @@ class Data extends Component {
         comments: this.state.comments,
       },
     ]);
-
   };
   updateComments = (e, context, index) => {
     this.setState({
@@ -88,6 +88,7 @@ class Data extends Component {
               />
 
               <input
+                className="submit"
                 type="submit"
                 onClick={(e) => {
                   this.uglyUpdate(e, context);
@@ -99,13 +100,13 @@ class Data extends Component {
               {context.uglyLists.map((uglyInfo, index) => (
                 <div id={index} key={index}>
                   <div className="title">
-                    <h3>Title: {uglyInfo.uglyTitle}</h3>
-                  </div>
-                  <div className="description">
-                    <h4>Description: {uglyInfo.uglydescription}</h4>
+                    <h3>{uglyInfo.uglyTitle}</h3>
                   </div>
                   <div className="image">
                     <img src={uglyInfo.uglyImage} alt="" />
+                  </div>
+                  <div className="description">
+                    <h4>Description: {uglyInfo.uglydescription}</h4>
                   </div>
                   <div className="comment">
                     <input
@@ -121,7 +122,7 @@ class Data extends Component {
                     />
                     {uglyInfo.comments.map((comment) => (
                       <div>
-                        <p>{comment}</p>
+                        <h4>{comment}</h4>
                       </div>
                     ))}
                   </div>
