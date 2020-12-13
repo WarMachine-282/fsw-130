@@ -11,11 +11,13 @@ class App extends Component {
     );
   }
 }
-const formattedSeconds = (sec) =>
-  Math.floor(sec / 60) +
-    ':' +
-  ('0' + sec % 60).slice(-2)
-  
+const formattedSeconds = (millis) => {
+  var hours = Math.floor(millis / 360000);
+  var minutes = Math.floor(millis / 60000);
+  var seconds = ((millis % 60000) / 1000).toFixed(0);
+  var milliseconds = (Math.floor(millis % 1000)).toFixed(0);
+  return hours + ":" + minutes + ":" + (seconds < 10 ? "0" : "") + seconds + ":" + milliseconds;
+};
 class Stopwatch extends Component {
   state = {
     status: false,
@@ -41,20 +43,15 @@ class Stopwatch extends Component {
   };
   handleLabClick() {
     this.setState({
-      laps: this.state.laps.concat([this.state.runningTime])
-    })
+      laps: this.state.laps.concat([this.state.runningTime]),
+    });
   }
-  // handleLap = () => {
-  //   const savedLaps = this.state.laps
-  //   this.setState({ laps: savedLaps });
-  // };
-  
   render() {
     const { status, runningTime, laps } = this.state;
     return (
       <div className="stopwatch">
         <div className="stopwatch-timer">
-          <p>{runningTime}ms</p>
+          <p>{formattedSeconds(runningTime)}</p>
           <button onClick={this.handleChange}>
             {status ? "Stop" : "Start"}
           </button>
@@ -62,13 +59,15 @@ class Stopwatch extends Component {
           <button onClick={this.handleLabClick.bind(this)}>Lap</button>
         </div>
         <ul className="stopwatch-laps">
-          { this.state.laps.map((lap, i) =>
-              <li className="stopwatch-lap"><strong>{i + 1}</strong>/ {formattedSeconds(lap)}</li>)
-          }
+          {this.state.laps.map((lap, i) => (
+            <li className="stopwatch-lap">
+              <strong>{i + 1}</strong>
+              {formattedSeconds(lap)}
+            </li>
+          ))}
         </ul>
       </div>
     );
   }
-  
 }
 export default App;
