@@ -2,7 +2,6 @@ const redux = require("redux");
 
 //Actions
 const addPerson = (name) => {
-  4;
   console.log(name, "payload");
   return {
     type: "ADD_PERSON",
@@ -61,18 +60,3 @@ store.dispatch(
   })
 );
 
-// {
-//     name: "Christian Van Loon",
-//     state: "California",
-//     occupation: "Student",
-//   },
-//   {
-//     name: "Logan Johnson",
-//     state: "Kentucky",
-//     occupation: "Student/Janitor",
-//   },
-//   {
-//     name: "Ismael Saurez",
-//     state: "texas",
-//     occupation: "Student/Factory worker",
-//   },
