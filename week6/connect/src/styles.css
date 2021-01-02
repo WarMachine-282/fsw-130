@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Oswald:300,400,700");
+
+html,
+body {
+  font-family: "Oswald", sans;
+  margin: 0%;
+  min-height: 100%;
+}
+/* buttons */
+#delBtn {
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.25rem;
+  padding: 11px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#delBtn-primary {
+  background-color: #000;
+  border-color: #666;
+  color: #fff;
+}
+#delBtn:hover {
+  background-color: #333;
+  border-color: #666;
+  color: #fff;
+}
+#subBtn {
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 1.25rem;
+  margin: auto;
+  padding: 11px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  vertical-align: middle;
+  width: 25%;
+  white-space: nowrap;
+}
+#subBtn-primary {
+  background-color: #000;
+  border-color: #666;
+  color: #fff;
+}
+#subBtn:hover {
+  background-color: #333;
+  border-color: #666;
+  color: #fff;
+}
+/* form */
+form {
+  margin: auto;
+  padding: 10px;
+  width: 75%;
+}
+input[type="text"],
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: auto;
+  padding: 12px 20px;
+  text-align: center;
+  width: 25%;
+}
+/* display */
+#contacts {
+  background-color: rgba(102, 102, 102, 0.2);
+  border: 1.5px solid #ccc;
+  color: #000;
+  font-size: 16px;
+  margin: 0.3px;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
