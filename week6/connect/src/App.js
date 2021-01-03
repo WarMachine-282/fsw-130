@@ -53,16 +53,18 @@ const App = (props) => {
             Submit
           </button>
         </form>
-        {props.contacts.map((contact, index) => (
-          <div id="contacts">
-            <p>{contact.name}</p>
-            <p>{contact.email}</p>
-            <p>{contact.phone}</p>
-            <button id="delBtn" onClick={(e) => onClickDelete(e, index)}>
-              Delete
-            </button>
-          </div>
-        ))}
+        <div id="content">
+          {props.contacts.map((contact, index) => (
+            <div id="contacts">
+              <p>{contact.name}</p>
+              <p>{contact.email}</p>
+              <p>{contact.phone}</p>
+              <button id="delBtn" onClick={(e) => onClickDelete(e, index)}>
+                Delete
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
