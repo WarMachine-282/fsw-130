@@ -45,7 +45,7 @@ class Data extends Component {
       },
     ]);
   };
-  updateComments = (e, context, index) => {
+  newComments = (e, context, index) => {
     this.setState({
       comments: [...context.uglyLists[index].comments, e.target.value],
       comment: "",
@@ -115,7 +115,7 @@ class Data extends Component {
                       onChange={this.handleChange}
                       onKeyPress={(e) => {
                         if (e.key === "Enter") {
-                          this.updateComments(e, context, index);
+                          this.newComments(e, context, index);
                         }
                       }}
                       placeholder="Comment"
