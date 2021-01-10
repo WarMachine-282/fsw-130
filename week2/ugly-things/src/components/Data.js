@@ -18,6 +18,7 @@ class Data extends Component {
       [name]: value,
     });
   };
+
   uglyUpdate = (e, context) => {
     e.preventDefault();
     this.setState({
@@ -45,6 +46,7 @@ class Data extends Component {
       },
     ]);
   };
+
   newComments = (e, context, index) => {
     this.setState({
       comments: [...context.uglyLists[index].comments, e.target.value],
@@ -108,6 +110,9 @@ class Data extends Component {
                   <div className="description">
                     <h4>Description: {uglyInfo.uglydescription}</h4>
                   </div>
+                  <button onClick={context.uglyDelete} id={index}>
+                    Delete
+                  </button>
                   <div className="comment">
                     <input
                       name="comment"
@@ -120,9 +125,15 @@ class Data extends Component {
                       }}
                       placeholder="Comment"
                     />
-                    {uglyInfo.comments.map((comment) => (
+                    {uglyInfo.comments.map((comment, i) => (
                       <div>
-                        <h4>{comment}</h4>
+                        <h4>
+                          {comment}{" "}
+                          <button
+                            onClick={(e) => context.uglyCommentDelete(e, index)}
+                            id={i}
+                          >Delete</button>
+                        </h4>
                       </div>
                     ))}
                   </div>

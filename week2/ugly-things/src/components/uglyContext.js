@@ -28,15 +28,48 @@ class ContextProvider extends Component {
     ],
   };
 
+  uglyDelete = (e) => {
+    console.log("deleting");
+    this.setState((prevState) => ({
+      uglyLists: prevState.uglyLists.filter((thingItem, index) => {
+        console.log("delete", e.target.id);
+        return index !== Number(e.target.id);
+      }),
+    }));
+  };
+  uglyCommentDelete = (e, itemIndex) => {
+    console.log("deleting", itemIndex);
+    this.setState((prevState) => ({
+      uglyLists: prevState.uglyLists.map((thingItem, index) => {
+        console.log("delete", e.target.id);
+        if (index === itemIndex) {
+          console.log(index, itemIndex);
+         thingItem.comments = thingItem.comments.filter((comment, i) => {
+            console.log(i, Number(e.target.id));
+            return i !== Number(e.target.id);
+          });
+        }
+        return thingItem;
+      }),
+    }));
+  };
+
   updateItems = (uglyLists) => {
-    console.log(uglyLists)
-    this.setState({uglyLists});
+    console.log(uglyLists);
+    this.setState({ uglyLists });
   };
 
   render() {
-    const {uglyLists} = this.state;
+    const { uglyLists } = this.state;
     return (
-      <Provider value={{uglyLists: uglyLists, updateItems: this.updateItems}}>
+      <Provider
+        value={{
+          uglyLists: uglyLists,
+          updateItems: this.updateItems,
+          uglyDelete: this.uglyDelete,
+          uglyCommentDelete: this.uglyCommentDelete,
+        }}
+      >
         {this.props.children}
       </Provider>
     );
@@ -44,5 +77,3 @@ class ContextProvider extends Component {
 }
 
 export { ContextProvider, Consumer as ContextConsumer };
-
-
