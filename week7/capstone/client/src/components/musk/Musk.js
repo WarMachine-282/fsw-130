@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { MuskContextConsumer } from "./MuskContext";
-import "./Musk.css"
+import MuskHeader from "./MuskHeader"
+import Footer from "../footer/Footer"
+import "../alignment.css"
+import "./MuskImage.css"
 
 class Musk extends Component {
   render() {
@@ -9,25 +11,24 @@ class Musk extends Component {
       <MuskContextConsumer>
         {(musk) => (
           <div>
-            <Link to="/">Go Back.</Link>
-            <div>
-              <ol>
-                {console.log(musk)}
+            <MuskHeader/>
+            <div className="musk-bg">
+              <div className="items">
                 {musk.achievements.map((index) => (
-                  <li>
-                    <hr />
-                    <br />
-                    <br />
-                    <h1>{index.company}</h1>
-                    <div className="center-content">
-                    <p>{index.product}</p>
-                    <p>{index.description}</p>
-                    <p>{index.worth}</p>
+                  <div className="page-content">
+                    <div className="card">
+                      <div className="content">
+                        <h2 className="title">{index.company}</h2>
+                        <p className="copy">{index.product}</p>
+                        <p className="copy">{index.description}</p>
+                        <p className="copy">{index.worth}</p>
+                      </div>
                     </div>
-                  </li>
+                  </div>
                 ))}
-              </ol>
+              </div>
             </div>
+            <Footer/>
           </div>
         )}
       </MuskContextConsumer>

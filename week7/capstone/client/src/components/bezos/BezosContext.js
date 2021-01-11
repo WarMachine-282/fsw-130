@@ -6,14 +6,14 @@ class BezosContextProvider extends Component {
     achievements: [
       {
         company: "Amazon",
-        product: "Electric car",
-        description: "Making electric vehicles popular.",
+        product: "E-commerce",
+        description: "Revolutionized the way we shop.",
         worth: "$1.7 trillion",
       },
       {
         company: "Blue Origin",
         product: "New Shepard",
-        description: "To make provide space travel to the moon.",
+        description: "To provide sustainable space travel to the moon.",
         worth: "$579 million",
       },
       {

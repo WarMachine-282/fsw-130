@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
 import { BezosContextConsumer } from "./BezosContext";
+import BezosHeader from "./BezosHeader"
+import Footer from "../footer/Footer"
+import "../alignment.css"
+import "./BezosImage.css"
 
 class Bezos extends Component {
   render() {
@@ -8,25 +11,24 @@ class Bezos extends Component {
       <BezosContextConsumer>
         {(bezos) => (
           <div>
-            <Link to="/">Go Back.</Link>
-            <div>
-              <ol>
-                {console.log(bezos)}
-                {bezos.achievements.map((index) => (
-                  <li>
-                    <hr />
-                    <br />
-                    <br />
-                    <h1>{index.company}</h1>
-                    <div className="center-content">
-                    <p>Product - {index.product}</p>
-                    <p>Description - {index.description}</p>
-                    <p>Value - {index.worth}</p>
+            <BezosHeader/>
+            <div className="bezos-bg">
+              <div className="items">
+              {bezos.achievements.map((index) => (
+                <div className="page-content">
+                  <div className="card">
+                    <div className="content">
+                      <h2 className="title">{index.company}</h2>
+                      <p className="copy">{index.product}</p>
+                      <p className="copy">{index.description}</p>
+                      <p className="copy">{index.worth}</p>
                     </div>
-                  </li>
-                ))}
-              </ol>
+                  </div>
+                </div>
+              ))}
+              </div>
             </div>
+            <Footer/>
           </div>
         )}
       </BezosContextConsumer>
