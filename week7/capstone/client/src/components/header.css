@@ -4,13 +4,12 @@
 *:after {
   box-sizing: border-box;
 }
-.head-container {
+/* .head-container {
   grid-template-columns: 1fr 1fr 1fr;
-
-}
+} */
 div.foo {
   font-family: "Lato", sans-serif;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   background-color: rgba(0, 0, 0, 0);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   width: 100%;
@@ -76,3 +75,36 @@ div.foo {
       height: 350px;
     }
   }
+  @media (max-width: 1160px) {
+    .letter {
+      font-size: 6em;
+    }
+    div.foo {
+      padding-bottom: 10px;
+    }
+  } 
+  @media (max-width: 900px) {
+    .letter {
+      font-size: 6em;
+    }
+  } 
+  @media (max-width: 675px) {
+    .letter {
+      font-size: 3em;
+    }
+  } 
+  @media (max-width: 575px) {
+    .letter {
+      font-size: 3em;
+    }
+  } 
+  @media (max-width: 495px) {
+    .letter {
+      font-size: 2em;
+    }
+  } 
+  @media (max-width: 395px) {
+    .letter {
+      font-size: 2em;
+    }
+  } 

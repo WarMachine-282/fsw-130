@@ -41,6 +41,14 @@ class MuskContextProvider extends Component {
         worth: "$500",
       },
     ],
+    email: ""
+  };
+
+  emailUpdate = (email) => {
+    this.setState({
+      email: email
+    }) 
+
   };
 
   render() {
@@ -52,7 +60,10 @@ class MuskContextProvider extends Component {
           product: this.state.product,
           description: this.state.description,
           worth: this.state.worth,
-        }}>
+          email: this.state.email,
+          emailUpdate: this.emailUpdate
+        }}
+      >
         {this.props.children}
       </Provider>
     );

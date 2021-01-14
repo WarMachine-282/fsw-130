@@ -11,3 +11,33 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  @media (max-width: 1160px) {
+    .bezos-bg {
+      height: 80vw;
+    }
+  } 
+  @media (max-width: 900px) {
+    .bezos-bg {
+      height: 120vw;
+    }
+  } 
+  @media (max-width: 575px) {
+    .bezos-bg {
+      height: 190vw;
+    }
+  } 
+  @media (max-width: 495px) {
+    .bezos-bg {
+      height: 240vw;
+    }
+  } 
+  @media (max-width: 405px) {
+    .btn-2 btn-secondary {
+      font-size: 1rem;
+    }
+  } 
+  @media (max-width: 395px) {
+    .bezos-bg {
+      height: 260vw;
+    }
+  } 

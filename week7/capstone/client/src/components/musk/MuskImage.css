@@ -11,3 +11,28 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  @media (max-width: 1160px) {
+    .musk-bg {
+      height: 80vw;
+    }
+  } 
+  @media (max-width: 900px) {
+    .musk-bg {
+      height: 120vw;
+    }
+  } 
+  @media (max-width: 575px) {
+    .musk-bg {
+      height: 190vw;
+    }
+  } 
+  @media (max-width: 495px) {
+    .musk-bg {
+      height: 240vw;
+    }
+  } 
+  @media (max-width: 395px) {
+    .musk-bg {
+      height: 260vw;
+    }
+  } 

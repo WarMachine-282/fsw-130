@@ -6,7 +6,8 @@ const MuskHeader = () => {
   return (
   <div className="head-container">
     <div className="foo">
-      <Link to="/" className="btn-2 btn-secondary">Go Back.</Link>
+      <Link to="/" className="btn-2 btn-secondary">Go Back</Link>
+      <Link to="/Form" className="btn-2 btn-secondary">Info</Link>
       <span className="letter" data-letter="M">M</span>
       <span className="letter" data-letter="U">U</span>
       <span className="letter" data-letter="S">S</span>

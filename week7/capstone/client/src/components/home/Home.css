@@ -62,17 +62,4 @@ h3 {
   background-color: #333;
   border-color: #666;
 }
-@media (min-width: 576px) {
-}
-@media (min-width: 768px) {
-}
-@media (min-width: 992px) {
-  .item {
-    width: 80%;
-  }
-}
-@media (min-width: 1200px) {
-  .item {
-    width: 60%;
-  }
-}
+
